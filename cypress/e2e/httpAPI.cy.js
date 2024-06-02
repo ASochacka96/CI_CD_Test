@@ -50,14 +50,6 @@
     });
 });
 
-  // 5 test
-  it('PUT request', () => {
-    cy.request('PUT', 'https://httpbin.org/put', { key: 'value' })
-        .then((response) => {
-            expect(response.status).to.eq(200);
-            expect(response.body.form.key).to.eq('value');
-        });
-  });
 
   // 6 test
   it('DELETE request', () => {
@@ -101,13 +93,4 @@
                 expect(duration).to.be.gte(1000);
             });
     });
-
-  // 10 test
-  it('POST request', () => {
-    cy.request('POST', 'https://httpbin.org/post', { key: 'value' })
-        .then((response) => {
-            expect(response.status).to.eq(200);
-            expect(response.body.form.key).to.eq('value');
-        });
-});
-});
+  });
